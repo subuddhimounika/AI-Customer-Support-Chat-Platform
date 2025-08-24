@@ -7,7 +7,15 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: [
+    "https://ai-customer-support-chat-platform-1.onrender.com" // your deployed frontend
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 

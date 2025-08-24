@@ -24,7 +24,7 @@ class OpenRouterClient {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json',
-          'HTTP-Referer': 'http://localhost:3000',
+          'HTTP-Referer': 'https://ai-customer-support-chat-platform-1.onrender.com',
           'X-Title': 'Customer Support AI',
         },
         body: JSON.stringify({

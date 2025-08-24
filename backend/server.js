@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // MongoDB Connection
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/customer_support';
+const mongoURI = process.env.MONGODB_URI;
 
 console.log('🔗 Attempting to connect to MongoDB...');
 console.log('📝 Connection string:', mongoURI);
@@ -156,11 +156,11 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log('📋 MongoDB connection state:', mongoose.connection.readyState);
-  console.log('🌐 Health check available at: http://localhost:' + PORT + '/api/health');
-  console.log('🧪 Test DB endpoint: POST http://localhost:' + PORT + '/api/test-db');
-  console.log('📚 Test FAQ endpoint: GET http://localhost:' + PORT + '/api/test-faqs');
+  console.log('🌐 Health check available at: https://ai-customer-support-chat-platform.onrender.com ' + '/api/health');
+  console.log('🧪 Test DB endpoint: POST https://ai-customer-support-chat-platform.onrender.com' + '/api/test-db');
+  console.log('📚 Test FAQ endpoint: GET https://ai-customer-support-chat-platform.onrender.com'+ '/api/test-faqs');
   console.log('📝 FAQ endpoints:');
-  console.log('   - GET http://localhost:' + PORT + '/api/faqs');
-  console.log('   - POST http://localhost:' + PORT + '/api/faqs');
-  console.log('   - POST http://localhost:' + PORT + '/api/faqs/upload');
+  console.log('   - GET https://ai-customer-support-chat-platform.onrender.com' + '/api/faqs');
+  console.log('   - POST https://ai-customer-support-chat-platform.onrender.com' + '/api/faqs');
+  console.log('   - POST https://ai-customer-support-chat-platform.onrender.com' + '/api/faqs/upload');
 });

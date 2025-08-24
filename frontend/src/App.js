@@ -5,7 +5,7 @@ import AdminPanel from './components/AdminPanel';
 import './App.css';
 
 // Set the base API URL
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://ai-customer-support-chat-platform.onrender.com';
 
 // Main Chat Component
 function ChatApp() {
